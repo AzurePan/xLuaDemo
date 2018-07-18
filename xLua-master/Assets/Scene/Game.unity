@@ -272,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 752370557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 5.6, z: -19.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -511,15 +511,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1812733659
+--- !u!1 &1832859942
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1812733661}
-  - component: {fileID: 1812733660}
+  - component: {fileID: 1832859944}
+  - component: {fileID: 1832859943}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -527,12 +527,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1812733660
+--- !u!114 &1832859943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1812733659}
+  m_GameObject: {fileID: 1832859942}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
@@ -540,26 +540,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   luaScript: {fileID: 4900000, guid: 0e5e51d173d00bd49a2f7b99876f21c2, type: 3}
   injections:
-  - name: Cube1
+  - name: Type1
     value: {fileID: 1862419961508124, guid: 99d22871dd3b16347b553d145df46ab6, type: 2}
-  - name: Cube2
-    value: {fileID: 1862419961508124, guid: 542956bcf00b6e541bd7d598fb6be331, type: 2}
-  - name: Cube3
-    value: {fileID: 1862419961508124, guid: 0885c5f093e09b5479f34d7c09af1f9e, type: 2}
-  - name: Cube4
-    value: {fileID: 1862419961508124, guid: 48c5d51ee5de23a4ca2a1c467d35be77, type: 2}
-  - name: Cube5
-    value: {fileID: 1862419961508124, guid: 78500a61dcfc915459987a7a844c3a26, type: 2}
-  - name: Cube6
-    value: {fileID: 1862419961508124, guid: 8950d911bc32f3842aa7159dcb783c88, type: 2}
-  - name: Cube7
-    value: {fileID: 1862419961508124, guid: 7a72027f27c8b934fba67d6a38df8422, type: 2}
---- !u!4 &1812733661
+--- !u!4 &1832859944
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1812733659}
+  m_GameObject: {fileID: 1832859942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

@@ -1,100 +1,33 @@
 require'define';
 
-    local block1 = {};
-    local block2 = {};
-    local block3 = {};
-    local block4 = {};
-    local block5 = {};
-    local block6 = {};
-    local block7 = {};
-    local cube1;
-    local cube2;
-    local cube3;
-    local cube4;
-    local cube5;
-    local cube6;
-    local cube7;
+    local block1 = {{0,0,0,0},{1,1,1,1},{0,0,0,0},{0,0,0,0}}
+    local block2 = {{0,1,0,0},{0,1,1,0},{0,0,1,0},{0,0,0,0}}  
+    local block3 = {{0,0,1,0},{0,1,1,0},{0,1,0,0},{0,0,0,0}} 
+    local block4 = {{0,0,0,0},{0,1,1,0},{0,1,1,0},{0,0,0,0}} 
+    local block5 = {{0,1,0,0},{0,1,0,0},{0,1,1,0},{0,0,0,0}} 
+    local block6 = {{0,0,1,0},{0,0,1,0},{0,1,1,0},{0,0,0,0}} 
+    local block7 = {{0,0,0,0},{1,1,1,0},{0,1,0,0},{0,0,0,0}} 
     
-    local  size = 4;
-    local childsize;
+    local cube;
+    local blockgroup = {block1,block2,block3,block4,block5,block6,block7}
+  
 
 function start()
-         block1 = {{0,0,0,0},{1,1,1,1},{0,0,0,0},{0,0,0,0}}
-         local fatherCube1 = GameObject("Type1").transform;
-         for y,x in ipairs(block1)
+     local block = blockgroup[math.random(1,7)]
+     local fathercube = GameObject("Cube").transform
+     
+        for y,x in ipairs(block)
               do
               for x,value in ipairs(x)
               do
-               if block1[y][x] == 1  then
-                  local cube1 = Instantiate(Cube1,Vector3(x-2.5,y-2,0),self.transform.rotation,fatherCube1.transform);
-               end
-          end
+                 if block[y][x] == 1  then             
+                  local cube = Instantiate(Type1,Vector3(x-2.5,y-2,0),self.transform.rotation,fathercube.transform);           
+               end  
+          end     
       end
-          block2 = {{1,1},{1,1}}   
-          local fatherCube2 = GameObject("Type2").transform;
-         for y,x in ipairs(block2)
-              do
-              for x,value in ipairs(x)
-              do
-               if block2[y][x] == 1  then
-                  local cube2 = Instantiate(Cube2,Vector3(x-1.5,y-1.5,0),self.transform.rotation,fatherCube2.transform);
-               end
-          end
-      end
-          block3 = {{0,0,1},{0,1,1},{0,1,0}}  
-          local fatherCube3 = GameObject("Type3").transform;
-         for y,x in ipairs(block3)
-              do
-              for x,value in ipairs(x)
-              do
-               if block3[y][x] == 1  then
-                  local cube3 = Instantiate(Cube3,Vector3(x-2.5,y-2,0),self.transform.rotation,fatherCube3.transform);
-               end
-          end
-      end
-         block4 = {{1,0,0},{1,1,0},{0,1,0}}
-         local fatherCube4 = GameObject("Type4").transform;
-         for y,x in ipairs(block4)
-              do
-              for x,value in ipairs(x)
-              do
-               if block4[y][x] == 1  then
-                  local cube4 = Instantiate(Cube4,Vector3(x-1.5,y-2,0),self.transform.rotation,fatherCube4.transform);
-               end
-          end
-      end
-         block5 = {{0,1,0},{1,1,1},{0,0,0}}  
-         local fatherCube5 = GameObject("Type5").transform;
-         for y,x in ipairs(block5)
-              do
-              for x,value in ipairs(x)
-              do
-               if block5[y][x] == 1  then
-                  local cube5 = Instantiate(Cube5,Vector3(x-2,y-1.5,0),self.transform.rotation,fatherCube5.transform);
-               end
-          end
-      end
-         block6 = {{0,0,1},{0,0,1},{0,1,1}}  
-         local fatherCube6 = GameObject("Type6").transform;
-         for y,x in ipairs(block6)
-              do
-              for x,value in ipairs(x)
-              do
-               if block6[y][x] == 1  then
-                  local cube6 = Instantiate(Cube6,Vector3(x-2.5,y-2.5,0),self.transform.rotation,fatherCube6.transform);
-               end
-          end
-      end
-         block7 = {{1,0,0},{1,0,0},{1,1,0}} 
-         local fatherCube7 = GameObject("Type7").transform;
-         for y,x in ipairs(block7)
-              do
-              for x,value in ipairs(x)
-              do
-               if block7[y][x] == 1  then
-                  local cube7 = Instantiate(Cube7,Vector3(x-1.5,y-2.5,0),self.transform.rotation,fatherCube7.transform);
-               end
-          end
-      end
+      fathercube.transform.position = Vector3(0,17,0)
   end
+  
+  function update()
+      
       

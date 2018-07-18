@@ -1,0 +1,14 @@
+require'Block';
+require'define';
+
+
+
+function start()
+    
+   if Input.GetMouseButtonDown(0) then
+      fatherCube1.transform.Rotate(0,0,90);
+    end
+end
+
+
+
